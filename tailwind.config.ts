@@ -10,6 +10,38 @@ export default {
     './src/features/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    extend: {
+      colors: {
+        hover: {
+          primary: '#F0B90B', // 메인 호버 색상
+        },
+        base: {
+          bg: '#0B0E11', // 배경색
+        },
+        primary: {
+          bg: '#181A20', // 배경색
+          text: '#EAECEF', // 텍스트 색상
+        },
+        secondary: {
+          text: '#848E9C', // 텍스트 색상
+        },
+        third: {
+          text: '#B7BDC6', // 텍스트 색상
+        },
+        long: {
+          text: '#2EBD85', // 텍스트 색상
+        },
+        short: {
+          text: '#F6465D', // 텍스트 색상
+        },
+        positive: {
+          DEFAULT: '#2EBD85', // 텍스트 색상
+        },
+        negative: {
+          DEFAULT: '#F6465D', // 텍스트 색상
+        },
+      },
+    },
     fontFamily: {
       pretendard: ['Pretendard Variable', 'Pretendard'],
       sans: [
