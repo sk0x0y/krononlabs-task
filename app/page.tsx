@@ -1,3 +1,4 @@
+import { SubHeader } from '@/src/widgets/trade';
 import Link from 'next/link';
 
 export default function Home() {
@@ -29,17 +30,7 @@ export default function Home() {
         }}
       />
 
-      <section className="px-4" style={{ gridArea: 'subHeader' }}>
-        <h2 className="font-medium text-xl">BTC/USDT</h2>
-
-        <Link
-          href="https://www.binance.com/en/price/bitcoin"
-          target="_blank"
-          className="text-xs text-secondary"
-        >
-          Bitcoin Price
-        </Link>
-      </section>
+      <SubHeader />
 
       <section className="" style={{ gridArea: 'right' }} />
 
