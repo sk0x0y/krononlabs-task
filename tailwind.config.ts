@@ -23,6 +23,7 @@ export default {
           text: '#EAECEF', // 텍스트 색상
         },
         secondary: {
+          DEFAULT: '#848E9C', // 기본 색상
           text: '#848E9C', // 텍스트 색상
         },
         third: {
