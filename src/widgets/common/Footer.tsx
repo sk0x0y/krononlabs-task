@@ -43,8 +43,7 @@ export default function Footer() {
         <span>Stable connection</span>
       </div>
 
-      <div className="flex items-center gap-4 justify-center overflow-x-scroll">
-        {/* 코인 리스트 영역 */}
+      <div className="flex items-center gap-4 justify-center overflow-x-auto">
         <div className="flex gap-1 text-xs">
           <span className="">BTC/USDT</span>
           <span className="text-positive">+2.04%</span>
