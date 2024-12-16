@@ -1,5 +1,4 @@
-import { SubHeader } from '@/src/widgets/trade';
-import Link from 'next/link';
+import { SubHeader, OrderBook } from '@/src/widgets/trade';
 
 export default function Home() {
   return (
@@ -34,9 +33,7 @@ export default function Home() {
 
       <section className="" style={{ gridArea: 'right' }} />
 
-      <section className="" style={{ gridArea: 'orderbook' }}>
-        orderbook
-      </section>
+      <OrderBook />
 
       <section
         className=""
