@@ -18,6 +18,12 @@ export default {
         base: {
           bg: '#0B0E11', // 배경색
         },
+        divider: {
+          DEFAULT: '#2B3139',
+        },
+        disabled: {
+          DEFAULT: '#5E6673',
+        },
         primary: {
           bg: '#181A20', // 배경색
           text: '#EAECEF', // 텍스트 색상
