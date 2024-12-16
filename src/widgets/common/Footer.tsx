@@ -1,6 +1,11 @@
 export default function Footer() {
   return (
-    <footer className="fixed bottom-0 z-10 flex items-center gap-4 w-full h-[28px] px-4 border-t-4 border-t-base-bg bg-primary-bg">
+    <footer
+      className="fixed bottom-0 z-10 flex items-center gap-4 w-full h-[28px] px-4 border-t-4 border-t-base-bg bg-primary-bg"
+      style={{
+        gridArea: 'footer',
+      }}
+    >
       <div className="flex items-center gap-1 text-xs text-positive">
         <svg
           width="12"
