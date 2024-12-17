@@ -4,6 +4,7 @@ import {
   BasicTable,
   OrderForm,
   Trades,
+  Chart,
   Market,
 } from '@widgets/trade';
 
@@ -42,14 +43,7 @@ export default function Home() {
 
       <OrderBook />
 
-      <section
-        className=""
-        style={{
-          gridArea: 'chart',
-        }}
-      >
-        chart
-      </section>
+      <Chart symbol="BTCUSDT" />
 
       <Market />
 
