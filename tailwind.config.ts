@@ -12,6 +12,9 @@ export default {
   theme: {
     extend: {
       colors: {
+        brand: {
+          DEFAULT: '#F0B90B', // 메인 색상
+        },
         hover: {
           primary: '#F0B90B', // 메인 호버 색상
         },
@@ -46,6 +49,9 @@ export default {
         },
         negative: {
           DEFAULT: '#F6465D', // 텍스트 색상
+        },
+        input: {
+          border: '#474D57', // 테두리 색상
         },
       },
     },
