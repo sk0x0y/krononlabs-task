@@ -1,4 +1,10 @@
-import { SubHeader, OrderBook, BasicTable, OrderForm } from '@widgets/trade';
+import {
+  SubHeader,
+  OrderBook,
+  BasicTable,
+  OrderForm,
+  Trades,
+} from '@widgets/trade';
 
 export default function Home() {
   return (
@@ -48,14 +54,7 @@ export default function Home() {
         market
       </section>
 
-      <section
-        className=""
-        style={{
-          gridArea: 'trades',
-        }}
-      >
-        trades
-      </section>
+      <Trades />
 
       <OrderForm />
 
