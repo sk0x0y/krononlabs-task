@@ -4,6 +4,7 @@ import {
   BasicTable,
   OrderForm,
   Trades,
+  Market,
 } from '@widgets/trade';
 
 export default function Home() {
@@ -50,9 +51,7 @@ export default function Home() {
         chart
       </section>
 
-      <section className="" style={{ gridArea: 'market' }}>
-        market
-      </section>
+      <Market />
 
       <Trades />
 
