@@ -2655,6 +2655,7 @@ __metadata:
     postcss: "npm:^8"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
+    react-ts-tradingview-widgets: "npm:^1.2.5"
     recoil: "npm:^0.7.7"
     tailwind-scrollbar-hide: "npm:^1.1.7"
     tailwindcss: "npm:^3.4.1"
@@ -3392,6 +3393,16 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: 10c0/33977da7a5f1a287936a0c85639fec6ca74f4f15ef1e59a6bc20338fc73dc69555381e211f7a3529b8150a1f71e4225525b41b60b52965bda53ce7d47377ada1
+  languageName: node
+  linkType: hard
+
+"react-ts-tradingview-widgets@npm:^1.2.5":
+  version: 1.2.5
+  resolution: "react-ts-tradingview-widgets@npm:1.2.5"
+  peerDependencies:
+    react: ^17.0.2 || ^18.1.0
+    react-dom: ^17.0.2 || ^18.1.0
+  checksum: 10c0/8c7ebacdcc65b76f206e0a7f55eeaa6743d833a8d93fb1f123b49dd4d1066e3a745bbca43554213c8bd0ecc2816a0bc7328d32b4ebd58bc173861eb8a59c78be
   languageName: node
   linkType: hard
 
