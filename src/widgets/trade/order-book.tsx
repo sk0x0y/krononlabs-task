@@ -1,4 +1,9 @@
-export default function OrderBook() {
+import { getOrderBookSnapshot } from '@shared/api';
+
+export default async function OrderBook() {
+  const orderBookSnapshot = await getOrderBookSnapshot('BTCUSDT');
+  console.log('orderBookSnapshot', orderBookSnapshot);
+
   return (
     <section style={{ gridArea: 'orderbook' }}>
       <div className="flex items-center h-[42px] px-4 border-b border-b-divider">
@@ -16,133 +21,45 @@ export default function OrderBook() {
 
         {/* 숏 포지션 */}
         <div className="py-1 text-xs">
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-negative">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-negative">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-negative">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-negative">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-negative">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-negative">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-negative">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-negative">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-negative">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-negative">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
+          {orderBookSnapshot.bids.map((bid, index) => (
+            <div key={index} className="flex justify-between py-0.5">
+              <span className="flex-1 text-negative">
+                {Number(bid[0]).toFixed(2)}
+              </span>
+              <span className="flex-1 text-right">
+                {Number(bid[1]).toFixed(5)}
+              </span>
+              <span className="flex-1 text-right">
+                {(bid[0] * bid[1]).toFixed(5)}
+              </span>
+            </div>
+          ))}
         </div>
 
         <div className="flex items-center h-[36px]">
-          <span className="mr-[20px] text-xl text-negative">107,047.80</span>
-          <span className="text-xs text-secondary">$107,047.80</span>
+          <span className="mr-[20px] text-xl text-negative">
+            {Number(orderBookSnapshot.bids[0][0]).toFixed(2) || '0.00'}
+          </span>
+          <span className="text-xs text-secondary">
+            ${Number(orderBookSnapshot.bids[0][0]).toFixed(2) || '0.00'}
+          </span>
         </div>
 
         {/* 롱 포지션 */}
         <div className="py-1 text-xs">
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-positive">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-positive">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-positive">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-positive">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-positive">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-positive">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-positive">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-positive">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-positive">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
-
-          <div className="flex justify-between py-0.5">
-            <span className="flex-1 text-positive">107212.00</span>
-            <span className="flex-1 text-right">0.06320</span>
-            <span className="flex-1 text-right">6.78K</span>
-          </div>
+          {orderBookSnapshot.asks.map((ask, index) => (
+            <div key={index} className="flex justify-between py-0.5">
+              <span className="flex-1 text-positive">
+                {Number(ask[0]).toFixed(2)}
+              </span>
+              <span className="flex-1 text-right">
+                {Number(ask[1]).toFixed(5)}
+              </span>
+              <span className="flex-1 text-right">
+                {(ask[0] * ask[1]).toFixed(5)}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </section>
