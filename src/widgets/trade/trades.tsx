@@ -15,7 +15,7 @@ export default function Trades() {
         </ul>
       </div>
 
-      <div className="px-4">
+      <div className="px-4 pb-3">
         <div className="flex justify-between py-2 text-xs text-secondary">
           <span className="flex-1">Price (USDT)</span>
           <span className="flex-1 text-right">Amount (BTC)</span>
@@ -24,7 +24,7 @@ export default function Trades() {
 
         {/* TODO:  17(16.5)개 표시 + Overflow Scroll */}
 
-        <div className="h-[358px] py-1 text-xs overflow-y-auto scrollbar-hide">
+        <div className="h-[332px] text-xs overflow-y-auto scrollbar-hide">
           <div className="flex justify-between py-0.5">
             <span className="flex-1 text-negative">107212.00</span>
             <span className="flex-1 text-right">0.06320</span>
