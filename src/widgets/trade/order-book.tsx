@@ -30,7 +30,7 @@ export default async function OrderBook() {
                 {Number(bid[1]).toFixed(5)}
               </span>
               <span className="flex-1 text-right">
-                {(bid[0] * bid[1]).toFixed(5)}
+                {(Number(bid[0]) * Number(bid[1])).toFixed(5)}
               </span>
             </div>
           ))}
@@ -56,7 +56,7 @@ export default async function OrderBook() {
                 {Number(ask[1]).toFixed(5)}
               </span>
               <span className="flex-1 text-right">
-                {(ask[0] * ask[1]).toFixed(5)}
+                {(Number(ask[0]) * Number(ask[1])).toFixed(5)}
               </span>
             </div>
           ))}
