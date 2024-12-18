@@ -107,7 +107,7 @@ export default function OrderBookClient({
           .map((ask, index) => (
             <div
               key={`${ask.price}-${index}`}
-              className="flex justify-between py-0.5"
+              className="flex justify-between py-0.5 cursor-pointer"
             >
               <span className="flex-1 text-negative">
                 {Number(ask.price).toFixed(2)}
@@ -143,7 +143,7 @@ export default function OrderBookClient({
         {bids.map((bid, index) => (
           <div
             key={`${bid.price}-${index}`}
-            className="flex justify-between py-0.5"
+            className="flex justify-between py-0.5 cursor-pointer"
           >
             <span className="flex-1 text-positive">{bid.price.toFixed(2)}</span>
             <span className="flex-1 text-right">{bid.amount.toFixed(5)}</span>
