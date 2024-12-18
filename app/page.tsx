@@ -41,7 +41,7 @@ export default function Home() {
 
       <section className="" style={{ gridArea: 'right' }} />
 
-      <OrderBook />
+      <OrderBook symbol="BTCUSDT" />
 
       <Chart symbol="BTCUSDT" />
 
